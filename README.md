@@ -55,3 +55,11 @@ xcodebuild -project IdasenController.xcodeproj -scheme IdasenController -configu
 | 目标高度输入 | `99FA0031-338A-1024-8A49-009C0215F78A` |
 
 高度以 0.1 mm 为单位、相对最低位 62 cm 编码；移动时每 200 ms 写入一次目标高度，速度归零即到位。
+
+## 支持 · Support
+
+遇到问题或有建议，请[提交 issue](https://github.com/liang2kl/idasen-controller/issues)。隐私政策见 [PRIVACY.md](PRIVACY.md)。
+
+Questions or bug reports: please [open an issue](https://github.com/liang2kl/idasen-controller/issues). See the [privacy policy](PRIVACY.md).
+
+Idasen 是独立开发的应用，与 IKEA 或 LINAK 无关。Idasen is an independent app and is not affiliated with IKEA or LINAK.

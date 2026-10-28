@@ -30,7 +30,7 @@ xcodebuild -project IdasenController.xcodeproj -scheme IdasenController -configu
 
 ### 发布到 App Store
 
-签名使用团队 `C5UH93T368` 的自动签名。归档时不指定 `-archivePath`，归档会存到 `~/Library/Developer/Xcode/Archives`，出现在 Xcode Organizer 中：
+签名使用团队 `C5UH93T368` 的自动签名。归档时不指定 `-archivePath`，归档会存到 Xcode 的归档目录（Xcode › Settings › Locations），出现在 Organizer 中：
 
 ```bash
 xcodebuild -project IdasenController.xcodeproj -scheme IdasenController -configuration Release -allowProvisioningUpdates archive

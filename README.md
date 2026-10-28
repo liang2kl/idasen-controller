@@ -28,6 +28,17 @@ xcodebuild -project IdasenController.xcodeproj -scheme IdasenController -configu
 
 产物位于 `build/Build/Products/Release/Idasen.app`。
 
+### 发布到 App Store
+
+签名使用团队 `C5UH93T368` 的自动签名。需要先在 Xcode › Settings › Accounts 中登录该 Apple ID，然后归档并上传：
+
+```bash
+xcodebuild -project IdasenController.xcodeproj -scheme IdasenController -configuration Release -archivePath build/Idasen.xcarchive -allowProvisioningUpdates archive
+xcodebuild -exportArchive -archivePath build/Idasen.xcarchive -exportOptionsPlist ExportOptions.plist -allowProvisioningUpdates
+```
+
+也可以在 Xcode Organizer 中选择归档并点「Distribute App」。
+
 ## 首次使用
 
 1. 启动后允许 Idasen 使用蓝牙。

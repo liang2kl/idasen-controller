@@ -30,14 +30,13 @@ xcodebuild -project IdasenController.xcodeproj -scheme IdasenController -configu
 
 ### 发布到 App Store
 
-签名使用团队 `C5UH93T368` 的自动签名。需要先在 Xcode › Settings › Accounts 中登录该 Apple ID，然后归档并上传：
+签名使用团队 `C5UH93T368` 的自动签名。归档时不指定 `-archivePath`，归档会存到 `~/Library/Developer/Xcode/Archives`，出现在 Xcode Organizer 中：
 
 ```bash
-xcodebuild -project IdasenController.xcodeproj -scheme IdasenController -configuration Release -archivePath build/Idasen.xcarchive -allowProvisioningUpdates archive
-xcodebuild -exportArchive -archivePath build/Idasen.xcarchive -exportOptionsPlist ExportOptions.plist -allowProvisioningUpdates
+xcodebuild -project IdasenController.xcodeproj -scheme IdasenController -configuration Release -allowProvisioningUpdates archive
 ```
 
-也可以在 Xcode Organizer 中选择归档并点「Distribute App」。
+然后在 Xcode › Window › Organizer 中选中该归档，点「Distribute App」上传。命令行导出可使用 `ExportOptions.plist`，前提是 `xcodebuild` 能识别 Xcode 中登录的账户。
 
 ## 首次使用
 

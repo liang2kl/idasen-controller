@@ -1,0 +1,32 @@
+name: IdasenController
+options:
+  bundleIdPrefix: com.liang2kl
+  deploymentTarget:
+    macOS: "14.0"
+  createIntermediateGroups: true
+
+settings:
+  base:
+    SWIFT_VERSION: "6.0"
+    MARKETING_VERSION: "1.0.0"
+    CURRENT_PROJECT_VERSION: "1"
+    CODE_SIGN_IDENTITY: "-"
+    CODE_SIGN_STYLE: Manual
+    ENABLE_HARDENED_RUNTIME: YES
+    SWIFT_EMIT_LOC_STRINGS: YES
+    LOCALIZATION_PREFERS_STRING_CATALOGS: YES
+
+targets:
+  IdasenController:
+    type: application
+    platform: macOS
+    sources:
+      - path: IdasenController
+    settings:
+      base:
+        PRODUCT_NAME: Idasen
+        PRODUCT_BUNDLE_IDENTIFIER: com.liang2kl.IdasenController
+        INFOPLIST_FILE: IdasenController/Resources/Info.plist
+        CODE_SIGN_ENTITLEMENTS: IdasenController/Resources/IdasenController.entitlements
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        COMBINE_HIDPI_IMAGES: YES

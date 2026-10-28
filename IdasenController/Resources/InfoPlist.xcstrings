@@ -1,0 +1,16 @@
+{
+  "sourceLanguage": "en",
+  "strings": {
+    "NSBluetoothAlwaysUsageDescription": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Idasen 使用蓝牙读取并调节升降桌的高度。"
+          }
+        }
+      }
+    }
+  },
+  "version": "1.0"
+}
